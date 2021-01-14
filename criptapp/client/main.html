@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>crypt</title>
+</head>
+
+<body>
+  <h1>Caesar encryption</h1>
+
+  {{> caesar}}
+  </body>
+
+
+<template name="caesar">
+    <input class="file" id="myfile" name="files[]" multiple="" type="file" />
+        <div class="row">
+            <div class="col">
+                <label for="InputText">Input Text</label>
+                <textarea class="form-control"  id="InputText" name="InputText" cols="30" rows="4">{{input}}</textarea>
+            </div>
+            <div class="col">
+                <label>
+                    <input type="number" id="offset" name="offset" value="1" min="-255" max="255" step="1">
+                </label>
+                <button  class="btn btn-primary btn-cypher" id="cypherBtn" name="cypherBtn">Encrypt</button>
+            </div>
+            <div class="col">
+                <label for="OutputText">Output Text</label>
+                <textarea class="form-control" id="OutputText" cols="30" rows="4">{{output}}</textarea>
+            </div>
+        </div>
+</template>
